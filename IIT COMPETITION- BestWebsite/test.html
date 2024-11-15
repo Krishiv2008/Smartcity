@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Hover Reveal Section</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Background Styling */
+    body {
+      background: #101010;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Section Container */
+    section {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      height: 60vh;
+      background: linear-gradient(45deg, #0a7cc9, #4e92d2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 30px;
+      box-shadow: 0 10px 60px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    /* Hover effect */
+    section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 80px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Reveal effect container */
+    .reveal-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 90%;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0.3s ease;
+    }
+
+    /* Section Hover Action - Reveal the hidden content */
+    section:hover .reveal-container {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Content inside reveal section */
+    .reveal-container h2 {
+      font-size: 2.5em;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      animation: glow 1.5s infinite alternate;
+    }
+
+    .reveal-container p {
+      font-size: 1.2em;
+      color: #fff;
+      margin-top: 20px;
+      opacity: 0.8;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* Button Style */
+    .cta-button {
+      display: inline-block;
+      background: #0a7cc9;
+      padding: 12px 30px;
+      color: white;
+      font-size: 1.2em;
+      border-radius: 30px;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0.9;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      opacity: 1;
+    }
+
+    /* Glow animation for title */
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(10, 124, 201, 0.9), 0 0 30px rgba(10, 124, 201, 0.7);
+      }
+      100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(10, 124, 201, 1), 0 0 50px rgba(10, 124, 201, 1);
+      }
+    }
+
+    /* Fade-in for paragraph */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Interactive Section with Hover Effect -->
+  <section>
+    <!-- Content that is revealed on hover -->
+    <div class="reveal-container">
+      <h2>Next-Gen Energy Solutions</h2>
+      <p>Join the revolution in clean and sustainable energy with the most innovative technologies of tomorrow.</p>
+      <a href="#" class="cta-button">Discover More</a>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Fjalla+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+#hero{
+    width: 100vw;
+    height: 110vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+    background-image: url(Images/herobg.png);
+    justify-content: space-between;
+}
+#hero img{
+    height: 95vh;
+    margin-top: 5vh;
+    transition: 1s;
+}
+#hero img:hover{
+
+    transform: scale(1.1,1.1);
+}
+body{height: 300vh;
+width: 100vh;
+overflow-x: hidden;}
+
+#herotext{
+    width: 100vw;
+    color: #fff;
+    margin-left: 20px;
+ margin-top: 15vh;
+}
+#herotext #herohead{
+    font-family: "Fjalla One", sans-serif;
+    font-size: 10rem;
+}
+
+#crsl{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25vh;
+    margin-inline:10vw ;
+    width: 80vw;
+    height: 80vh;
+    margin-bottom: 10vh;
+    border-radius: 2vh;
+    overflow-y: hidden;
+}
+
+#ctext{
+    width: 100vw;
+    height: 100vh;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20vh;
+    position: relative;
+    text-align: center;
+}
+#ctext #text{
+    align-items: flex-start;
+    margin-left: 10vh;
+    text-align: left;
+    width: 50vw;
+    background-color: rgb(255, 255, 255);
+}
+#ctext #text h2{
+    color: #3ca7ff;
+    font-size:4rem;
+}
+#ctext #text p{
+    font-size: 1.4rem;
+    line-height: 155%;
+    padding-top: 2vh;
+    font-weight: 600;
+}
+
+#ctext img{
+    width: 500px;
+    height: 500px;
+    margin-right: 10vh;
+    border-radius: 100%;
+}
+@media screen and (max-width: 1050px) {
+    #ctext img{
+      display: none;
+    }
+    #ctext #text{
+        width: 80vw;
+        height: 80vh;
+        overflow-y: hidden;
+    }
+  }
+  
+
+      #coolsection {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        height: 60vh;
+        background: linear-gradient(45deg, #0a7cc9, #4e92d2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 0 10px 60px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+  
+    
+    #coolsection:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 80px rgba(0, 0, 0, 0.5);
+      }
+  
+     
+      .reveal-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        overflow: hidden;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0.3s ease;
+      }
+  
+     
+      section:hover .reveal-container {
+        opacity: 1;
+        visibility: visible;
+      }
+        .reveal-container h2 {
+        font-size: 2.5em;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        animation: glow 1.5s infinite alternate;
+      }
+  
+      .reveal-container p {
+        font-size: 1.2em;
+        color: #fff;
+        margin-top: 20px;
+        opacity: 0.8;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+  
+   
+      .cta-button {
+        display: inline-block;
+        background: #0a7cc9;
+        padding: 12px 30px;
+        color: white;
+        font-size: 1.2em;
+        border-radius: 30px;
+        margin-top: 20px;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 0.9;
+      }
+  
+      .cta-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        opacity: 1;
+      }
+  
+     .alignment{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        margin-top: -10vh;
+        align-items: center;
+    
+     }
+      @keyframes glow {
+        0% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(10, 124, 201, 0.9), 0 0 30px rgba(10, 124, 201, 0.7);
+        }
+        100% {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(10, 124, 201, 1), 0 0 50px rgba(10, 124, 201, 1);
+        }
+      }
+  
+      /* Fade-in for paragraph */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
